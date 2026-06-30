@@ -5,10 +5,7 @@ import models.Ticket.Priority;
 import models.Ticket.Status;
 
 public class Validator {
-    //no fields and no constructors
-    //object, you just call Validator.isNotBlank(name) directly. 
-    // This makes sense because validation is stateless: the result 
-    // depends only on the input you pass in, not on any stored data.
+    
     public static boolean isNotBlank(String value) {
         return value != null && !value.isBlank();
     }

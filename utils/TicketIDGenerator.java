@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TicketIDGenerator {
 
     private static final String PREFIX  = "T";
-    private static final int    PADDING = 3;
+    private static final int    PADDING = 6;
 
     private final AtomicInteger counter;
 

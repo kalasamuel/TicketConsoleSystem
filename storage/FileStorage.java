@@ -12,12 +12,9 @@ public class FileStorage {
 
     private static final String FILE_PATH = "data/tickets.txt";
 
-    //Bundling the loaded map AND the highest ID number seen in the file.
-    //TicketService uses the seed to initialise TicketIDGenerator correctly.
-
     public static class LoadResult {
         public final LinkedHashMap<String, Ticket> tickets;
-        public final int                           highestId;
+        public final int highestId;
 
         LoadResult(LinkedHashMap<String, Ticket> tickets, int highestId) {
             this.tickets   = tickets;
