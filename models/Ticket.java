@@ -77,7 +77,7 @@ public class Ticket{
     public String toFileLine() {
         String commentsField = String.join("\u001F", comments);
         return String.join("\t", ticketID, customerName, phoneNumber, category, priority.name(),status.name(), description, creationDate.toString(),commentsField);
-    } //priority.name() and status.name() convert the enum constants back to their string names ("HIGH", "OPEN", etc.) for storage.
+    } ////priority.name() and status.name() convert the enum constants back to their string names ("HIGH", "OPEN", etc.) for storage.
 
     public static Ticket fromFileLine(String line) {
         String[] parts = line.split("\t", -1);
@@ -105,8 +105,8 @@ public class Ticket{
     }
 
     public void displayDetails() {
-        // String line = "─".repeat(50);
-        // System.out.println(line);
+        String line = "─".repeat(50);
+        System.out.println(line);
         System.out.printf("  Ticket ID    : %s%n", ticketID);
         System.out.printf("  Customer     : %s%n", customerName);
         System.out.printf("  Phone        : %s%n", phoneNumber);
@@ -123,7 +123,7 @@ public class Ticket{
                 System.out.println("    • " + c);
             }
         }
-        // System.out.println(line);
+        System.out.println(line);
     }
 
     @Override

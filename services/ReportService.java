@@ -5,11 +5,6 @@ import models.Ticket;
 import java.util.Collection;
 
 public class ReportService {
-    // this class has no fields and no constructor
-    // it exists purely to own the reporting responsibility 
-    // that was previously crammed inside TicketService
-    // TicketService handles CRUD and search, 
-    // ReportService handles reporting, and neither does the other's job.
 
     public void displayReport(Collection<Ticket> tickets){
         int total  =tickets.size();
@@ -45,12 +40,12 @@ public class ReportService {
         System.out.println(sep);
         System.out.println("           TICKET REPORT");
         System.out.println(sep);
-        System.out.printf("  %-22s : %d%n", "Total Tickets",    total);
+        System.out.printf("  %-22s : %d%n", "Total Tickets", total);
         System.out.println("  " + "─".repeat(36));
-        System.out.printf("  %-22s : %d%n", "Open",             open);
-        System.out.printf("  %-22s : %d%n", "In Progress",      inProgress);
-        System.out.printf("  %-22s : %d%n", "Resolved",         resolved);
-        System.out.printf("  %-22s : %d%n", "Closed",           closed);
+        System.out.printf("  %-22s : %d%n", "Open", open);
+        System.out.printf("  %-22s : %d%n", "In Progress", inProgress);
+        System.out.printf("  %-22s : %d%n", "Resolved", resolved);
+        System.out.printf("  %-22s : %d%n", "Closed",closed);
         System.out.println("  " + "─".repeat(36));
         System.out.printf("  %-22s : %d%n", "High Priority",    high);
         System.out.printf("  %-22s : %d%n", "Medium Priority",  medium);
