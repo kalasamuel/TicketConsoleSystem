@@ -1,0 +1,10 @@
+D:\Pahappa-intern\hibernate_project\src\main\java\Main.java
+D:\Pahappa-intern\hibernate_project\src\main\java\models\Comment.java
+D:\Pahappa-intern\hibernate_project\src\main\java\models\Ticket.java
+D:\Pahappa-intern\hibernate_project\src\main\java\repository\HibernateTicketRepository.java
+D:\Pahappa-intern\hibernate_project\src\main\java\repository\TicketRepository.java
+D:\Pahappa-intern\hibernate_project\src\main\java\services\ReportService.java
+D:\Pahappa-intern\hibernate_project\src\main\java\services\TicketService.java
+D:\Pahappa-intern\hibernate_project\src\main\java\storage\HibernateUtil.java
+D:\Pahappa-intern\hibernate_project\src\main\java\utils\InputHelper.java
+D:\Pahappa-intern\hibernate_project\src\main\java\utils\Validator.java
