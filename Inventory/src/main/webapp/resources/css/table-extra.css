@@ -1,0 +1,104 @@
+.panel {
+  width: 800px;
+  max-width: 90vw;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+
+.panel h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  text-align: center;
+}
+
+.panel .top-link {
+  margin-bottom: 15px;
+  font-size: 14.5px;
+  text-align: center;
+}
+
+.panel .top-link a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.panel .top-link a:hover {
+  text-decoration: underline;
+}
+
+.ui-datatable,
+.ui-datatable .ui-datatable-tablewrapper,
+.ui-datatable table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  color: #fff;
+}
+
+.ui-datatable .ui-datatable-data,
+.ui-datatable .ui-datatable-data > tr,
+.ui-datatable .ui-datatable-data > tr > td {
+  background: transparent !important;
+}
+
+.ui-datatable .ui-datatable-thead > tr > th {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: transparent !important;
+  color: #fff;
+  text-align: left;
+}
+
+.ui-datatable .ui-datatable-data > tr > td {
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.ui-datatable .ui-datatable-data > tr:hover > td {
+  background: rgba(255, 255, 255, .06) !important;
+}
+
+.ui-datatable .ui-datatable-empty-message > td {
+  padding: 20px;
+  color: rgba(255, 255, 255, .7);
+  text-align: center;
+}
+
+.btn-sm,
+.ui-button.btn-sm,
+.ui-button.ui-state-default.btn-sm,
+.ui-commandlink.btn-sm {
+  height: 32px;
+  padding: 0 16px;
+  background: #fff;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+}
+.btn-sm .ui-button-text,
+.ui-button.btn-sm .ui-button-text,
+.ui-button.ui-state-default.btn-sm .ui-button-text,
+.ui-commandlink.btn-sm .ui-button-text {
+  color: #3a3838 !important;
+}
+.btn-sm:hover,
+.btn-sm:focus,
+.btn-sm:active,
+.btn-sm.ui-state-hover,
+.btn-sm.ui-state-focus,
+.btn-sm.ui-state-active {
+  background: #000 !important;
+  border-color: #000 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}

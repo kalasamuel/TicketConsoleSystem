@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Inventory</display-name>
+
+<!-- puts JSF into development mode -->
+<!-- this forces the server to provide highly detailed, readable yellow-screen error messagesin your browserwhen the code fails -->
+    <context-param>
+        <param-name>jakarta.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value> <!-- switch this value to **Production** when launching the live application-->
+    </context-param>
+
+<!-- instructs JSF rendering to ignore and strip out standard XHTML comments when generating pages -->
+<!-- prevents your developer notes from being sent to the user's web browser, keeping your pages smaller and protecting your internal code structure from public view -->
+    <context-param>
+        <param-name>jakarta.faces.FACELETS_SKIP_COMMENTS</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+
+<!-- This is the heart of JSF. It registers the built-in **FacesServlet** controller and tells it to intercept every URL request that ends with .xhtml -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup> <!-- Forces the server to spin up the JSF processing engine immediately when the server boots uo, rather than waiting for the very first user to open the page -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+<!-- Without this mapping, if the browser requests **form.xhtml**, the browser would display the raw, unrendered XML code. 
+    This mapping tells the server: "Pass this file to JSF first, let it build the component tree, and turn it into real HTML before replying to the user" -->
+
+
+<!-- Boots up **JBOOS WELD** which is the engineresponsible Contexts and Dependency Injection (CDI) -->
+<!-- This is exactly what makes the Java code Scopes work. It allows you to use scope annotations   like @RequestScoped or @Named on your inventoryBean. Without this listener, your XHTML forms will not be able to talk to your Java backend objects. -->
+    <listener>
+        <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>form.xhtml</welcome-file>
+    </welcome-file-list>
+
+</web-app>

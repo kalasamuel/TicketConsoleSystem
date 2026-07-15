@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+    <ui:define name="content">
+        <div class="wrapper">
+            <h1>Add Product</h1>
+            <h:form id="productForm">
+                <div class="input-box">
+                    <p:inputText value="#{inventoryBean.product.name}"
+                                 placeholder="Product Name" required="true"/>
+                    <i class="bx bxs-box"/>
+                </div>
+                <div class="input-box">
+                    <p:inputText value="#{inventoryBean.product.category}"
+                                 placeholder="Category" required="true"/>
+                    <i class="bx bxs-category"/>
+                </div>
+                <div class="input-box">
+                    <p:inputNumber value="#{inventoryBean.product.quantity}"
+                                   placeholder="Quantity" decimalPlaces="0" required="true"/>
+                    <i class="bx bxs-package"/>
+                </div>
+                <div class="input-box">
+                    <p:inputNumber value="#{inventoryBean.product.price}"
+                                   placeholder="Unit Price" symbol=" UGX" symbolPosition="s"
+                                   required="true"/>
+                    <i class="bx bxs-coin-stack"/>
+                </div>
+
+                <p:commandButton value="Save Product" action="#{inventoryBean.addProduct}"
+                                  styleClass="btn" ajax="false"/>
+
+                <div class="register-link">
+                    <p><h:link outcome="table" value="View Inventory"/></p>
+                </div>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
